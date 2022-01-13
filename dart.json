@@ -1,0 +1,34 @@
+{
+    "Create a JsonSerializable Data Class": {
+        "prefix": "dclass",
+        "body": [
+            "import 'package:json_annotation/json_annotation.dart';",
+            "",
+            "part '$TM_FILENAME_BASE.g.dart';",
+            "",
+            "@JsonSerializable()",
+            "class $1 {",
+            "",
+            "\t$1();",
+            "",
+            "\tfactory $1.fromJson(Map<String, dynamic> json) => _$$1FromJson(json);",
+            "",
+            "\tMap<String, dynamic> toJson() => _$$1ToJson(this);",
+            "",
+            "\tfactory $1.fromMap(Map<String, dynamic> map) => _$$1FromJson(map);",
+            "",
+            "\tMap<String, dynamic> toMap() => _$$1ToJson(this);",
+            "}"
+        ],
+        "description": "Creates a JSONSerializable class inside a dart file which container fromMap toMap fromJson fromMap."
+    },
+    "import JSONSerializable annotation for code generation": {
+        "prefix": "dimp",
+        "body": [
+            "import 'package:json_annotation/json_annotation.dart';",
+            "",
+            "part '$TM_FILENAME_BASE.g.dart';"
+        ],
+        "description": "import the JSONSerializable annotated libary and its *.g.dart file for current dart classes."
+    }
+}
